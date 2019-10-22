@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="RoundRectangle">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/eg/edu/alexu/csd/oop/test/draw/RoundRectangle.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

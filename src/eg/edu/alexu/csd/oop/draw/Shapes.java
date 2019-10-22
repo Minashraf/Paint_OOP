@@ -6,7 +6,7 @@ import java.util.Map;
 abstract class Shapes implements Shape {
     private int x,y;
     private Color Color,FillColor;
-    private Map<String,Double> Properties;
+
     @Override
     public void setPosition(Point position) {
         this.x=position.x;
@@ -20,12 +20,11 @@ abstract class Shapes implements Shape {
 
     @Override
     public void setProperties(Map<String, Double> properties) {
-        this.Properties=properties;
     }
 
     @Override
     public Map<String, Double> getProperties() {
-        return this.Properties;
+        return null;
     }
 
     @Override

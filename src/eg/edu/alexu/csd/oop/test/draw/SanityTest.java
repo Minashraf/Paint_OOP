@@ -1,19 +1,15 @@
 package eg.edu.alexu.csd.oop.test.draw;
 
-import static org.junit.Assert.*;
-
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Point;
-import java.util.List;
-import java.util.Map;
-
-import org.junit.Test;
-
 import eg.edu.alexu.csd.oop.draw.DrawingEngine;
 import eg.edu.alexu.csd.oop.draw.Shape;
 import eg.edu.alexu.csd.oop.test.DummyShape;
 import eg.edu.alexu.csd.oop.test.TestRunner;
+import org.junit.Test;
+
+import java.awt.*;
+import java.util.List;
+
+import static org.junit.Assert.*;
 
 
 
