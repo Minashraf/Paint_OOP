@@ -5,9 +5,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Square extends Shapes {
-    private Map<String,Double> Properties=new HashMap<>();
+    private Map<String,Double> Properties;
     private Square(int x1,int y1)
     {
+        Properties=new HashMap<>();
         this.setPosition(new Point(x1,y1));
         Properties.put("side",0.0);
     }

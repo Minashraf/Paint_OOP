@@ -5,9 +5,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Circle extends Shapes {
-    private Map<String,Double> Properties=new HashMap<>();
+    private Map<String,Double> Properties;
     private Circle(int x1,int y1)
     {
+        Properties=new HashMap<>();
         this.setPosition(new Point(x1,y1));
         Properties.put("radius",0.0);
     }
