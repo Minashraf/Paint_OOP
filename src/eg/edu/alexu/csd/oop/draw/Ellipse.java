@@ -9,8 +9,8 @@ public class Ellipse extends Shapes {
     private Ellipse(int x1,int y1)
     {
         this.setPosition(new Point(x1,y1));
-        Properties.put("width",(double)x1);
-        Properties.put("height",(double)y1);
+        Properties.put("width",0.0);
+        Properties.put("height",0.0);
     }
     @Override
     public void setProperties(Map<String, Double> properties) {
@@ -27,6 +27,10 @@ public class Ellipse extends Shapes {
                 (int)Math.round(Properties.get("width")),(int)Math.round(Properties.get("height")));
     }
     public Object clone() throws CloneNotSupportedException {
-        return new Ellipse(this.getPosition().x+5,this.getPosition().y+5);
+        Shape ellipse=new Ellipse(this.getPosition().x+5,this.getPosition().y+5);
+        ellipse.setProperties(this.getProperties());
+        ellipse.setColor(this.getColor());
+        ellipse.setFillColor(this.getFillColor());
+        return ellipse;
     }
 }

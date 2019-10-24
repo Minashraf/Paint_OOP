@@ -26,6 +26,10 @@ public class Square extends Shapes {
                 (int)Math.round(Properties.get("side")),(int)Math.round(Properties.get("side")));
     }
     public Object clone() throws CloneNotSupportedException {
-        return new Square(this.getPosition().x+5,this.getPosition().y+5);
+        Shape square=new Square(this.getPosition().x+5,this.getPosition().y+5);
+        square.setProperties(this.getProperties());
+        square.setColor(this.getColor());
+        square.setFillColor(this.getFillColor());
+        return square;
     }
 }

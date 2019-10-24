@@ -27,6 +27,10 @@ public class Rectangle extends Shapes {
                 (int)Math.round(Properties.get("width")),(int)Math.round(Properties.get("height")));
     }
     public Object clone() throws CloneNotSupportedException {
-        return new Rectangle(this.getPosition().x+5,this.getPosition().y+5);
+        Shape rectangle=new Rectangle(this.getPosition().x+5,this.getPosition().y+5);
+        rectangle.setProperties(this.getProperties());
+        rectangle.setColor(this.getColor());
+        rectangle.setFillColor(this.getFillColor());
+        return rectangle;
     }
 }

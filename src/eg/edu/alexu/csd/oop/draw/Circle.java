@@ -26,6 +26,19 @@ public class Circle extends Shapes {
                 (int)Math.round(Properties.get("radius"))*2,(int)Math.round(Properties.get("radius"))*2);
     }
     public Object clone() throws CloneNotSupportedException {
-        return new Circle(this.getPosition().x+5,this.getPosition().y+5);
+        Shape circle=new Circle(this.getPosition().x+5,this.getPosition().y+5);
+        circle.setProperties(this.getProperties());
+        circle.setColor(this.getColor());
+        circle.setFillColor(this.getFillColor());
+        return circle;
+    }
+
+    public static void main(String[] args) throws CloneNotSupportedException {
+        Shape test=new Circle(0,0);
+        Map<String,Double> pro=new HashMap<>();
+        pro.put("radius",98.5);
+        test.setColor(Color.cyan);
+        test.setProperties(pro);
+        Shape cl= (Circle) test.clone();
     }
 }

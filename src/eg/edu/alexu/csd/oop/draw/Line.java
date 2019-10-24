@@ -27,6 +27,10 @@ public class Line extends Shapes {
                 (int)Math.round(Properties.get("x2")),(int)Math.round(Properties.get("y2")));
     }
     public Object clone() throws CloneNotSupportedException {
-        return new Line(this.getPosition().x+5,this.getPosition().y+5);
+        Shape line=new Line(this.getPosition().x+5,this.getPosition().y+5);
+        line.setProperties(this.getProperties());
+        line.setColor(this.getColor());
+        line.setFillColor(this.getFillColor());
+        return line;
     }
 }
