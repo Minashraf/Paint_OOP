@@ -33,13 +33,4 @@ public class Circle extends Shapes {
         circle.setFillColor(this.getFillColor());
         return circle;
     }
-
-    public static void main(String[] args) throws CloneNotSupportedException {
-        Shape test=new Circle(0,0);
-        Map<String,Double> pro=new HashMap<>();
-        pro.put("radius",98.5);
-        test.setColor(Color.cyan);
-        test.setProperties(pro);
-        Shape cl= (Circle) test.clone();
-    }
 }
