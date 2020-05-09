@@ -36,11 +36,11 @@ public class Ellipse extends Shapes {
     public void draw(Graphics canvas) {
         canvas.setColor(this.getFillColor());
         canvas.fillOval(this.getPosition().x-(int)Math.round(Properties.get("width"))/2,this.getPosition().y-(int)Math.round(Properties.get("height"))/2,
-                (int)Math.round(Properties.get("width")),(int)Math.round(Properties.get("height")));
+                 (int)Math.round(Properties.get("width")),(int)Math.round(Properties.get("height")));
         ((Graphics2D)canvas).setStroke(new BasicStroke(2.0F));
         canvas.setColor(this.getColor());
         canvas.drawOval(this.getPosition().x-(int)Math.round(Properties.get("width"))/2,this.getPosition().y-(int)Math.round(Properties.get("height"))/2,
-                (int)Math.round(Properties.get("width")),(int)Math.round(Properties.get("height")));
+                 (int)Math.round(Properties.get("width")),(int)Math.round(Properties.get("height")));
 
     }
     public Object clone() throws CloneNotSupportedException {
